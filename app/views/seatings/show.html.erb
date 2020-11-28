@@ -1,0 +1,18 @@
+
+<p>
+  Welcome to the seating arrangement
+  <div>
+    <% for i in 0..@max_row - 1 %>
+      <table style="float: left">
+        <% current_comp =  @filled_seats[i] %>
+        <% for j in 0..current_comp.length - 1 %>
+          <tr>
+            <% for k in 0..current_comp[0].length - 1 %>
+              <td><%= current_comp[j][k]%>  </td>
+              <% end %>
+          </tr>
+          <% end %>
+      </table>
+    <% end %>
+  </div>
+</p>

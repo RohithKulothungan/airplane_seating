@@ -1,0 +1,20 @@
+<%= form_with scope: :seating, url: seatings_path, local: true do |form| %>
+  <p>
+    <%= form.label :NumberOfCompartment, 'Number Of Compartment' %><br>
+    <%= form.text_field :noc %>
+  </p>
+
+  <p>
+    <%= form.label :CompartmentDifferentiationWithCommaSeparated, 'Compartment Differentiation As Comma Separated' %><br>
+    <%= form.text_area :comDif %>
+  </p>
+
+  <p>
+    <%= form.label :PassengerCount,'Passenger Count' %><br>
+    <%= form.text_field :pc %>
+  </p>
+
+  <p>
+    <%= form.button 'Generate Seating', type: 'submit' %>
+  </p>
+<% end %>
